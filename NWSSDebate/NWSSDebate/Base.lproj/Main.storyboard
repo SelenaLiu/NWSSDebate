@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="t4B-hF-oZq">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Menu View Controller-->
+        <scene sceneID="Dzr-bl-fXQ">
+            <objects>
+                <viewController id="t4B-hF-oZq" customClass="MenuViewController" customModule="NWSSDebate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nEJ-x9-V79">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="oxx-JM-SLB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1sD-29-P2p"/>
+                    <connections>
+                        <segue destination="2v7-9F-AAI" kind="presentation" identifier="toIndividualTimer" id="fC5-gU-n5p"/>
+                        <segue destination="NpG-Pq-hSa" kind="presentation" identifier="toFullDebateTimer" id="yKC-XU-ZuI"/>
+                        <segue destination="d11-yw-iJA" kind="show" identifier="toFormatInformation" id="Md9-Fi-gVo"/>
+                        <segue destination="z4p-Dc-8Gn" kind="presentation" identifier="toAboutUsPage" id="Rml-Ag-OOI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c57-5F-4YU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="913" y="-566"/>
+        </scene>
+        <!--Onboarding1-->
+        <scene sceneID="XrY-2b-gvv">
+            <objects>
+                <viewController storyboardIdentifier="Onboarding1" id="0Tg-uV-0kS" customClass="Onboarding1" customModule="NWSSDebate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="66M-hd-5Tn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Cx4-V2-ObP"/>
+                    </view>
+                    <connections>
+                        <segue destination="t4B-hF-oZq" kind="show" identifier="finishOnboarding" id="5RL-Ds-Hpj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dh0-J2-lH3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="29.600000000000001" y="-566.00985221674875"/>
+        </scene>
+        <!--Single Timer View Controller-->
+        <scene sceneID="ec4-9f-jsL">
+            <objects>
+                <viewController id="2v7-9F-AAI" customClass="SingleTimerViewController" customModule="NWSSDebate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eYt-oj-YJj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="U9R-Vw-soy"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KTL-hj-mQX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1846" y="-566"/>
+        </scene>
+        <!--Swiping View Controller-->
+        <scene sceneID="Aai-ZS-68f">
+            <objects>
+                <collectionViewController id="d11-yw-iJA" customClass="SwipingViewController" customModule="NWSSDebate" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" id="MYZ-NS-7uZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Xyw-RS-FNj">
+                            <size key="itemSize" width="89" height="88"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="d11-yw-iJA" id="mu2-mc-71g"/>
+                            <outlet property="delegate" destination="d11-yw-iJA" id="w1Y-d0-leY"/>
+                        </connections>
+                    </collectionView>
+                    <size key="freeformSize" width="375" height="1000"/>
+                    <connections>
+                        <outlet property="collectionView" destination="MYZ-NS-7uZ" id="Giw-at-iuv"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x2F-0r-ejw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="31" y="260"/>
+        </scene>
+        <!--Full Timer Format View Controller-->
+        <scene sceneID="sfC-GW-FT5">
+            <objects>
+                <viewController id="NpG-Pq-hSa" customClass="FullTimerFormatViewController" customModule="NWSSDebate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZuP-Xf-qDw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ttC-G7-xaG"/>
+                    </view>
+                    <connections>
+                        <segue destination="wBk-iY-zJ7" kind="show" identifier="toFullDebateTimer" id="YGZ-4S-Vkm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P48-FK-fgZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="913" y="192"/>
+        </scene>
+        <!--Full Timer View Controller-->
+        <scene sceneID="Xcz-LY-FWq">
+            <objects>
+                <viewController id="wBk-iY-zJ7" customClass="FullTimerViewController" customModule="NWSSDebate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9gO-ER-1AC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="MzU-O4-Bb2"/>
+                    </view>
+                    <connections>
+                        <segue destination="t4B-hF-oZq" kind="show" identifier="backToMenu" id="UNV-Za-Qw1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7U0-VI-ynB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1895" y="191"/>
+        </scene>
+        <!--About Us View Controller-->
+        <scene sceneID="QVi-Os-Svm">
+            <objects>
+                <viewController id="z4p-Dc-8Gn" customClass="AboutUsViewController" customModule="NWSSDebate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9tT-oy-A4Z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="FgM-sC-bnK"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f76-Dz-Mx8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2715" y="191"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="UNV-Za-Qw1"/>
+    </inferredMetricsTieBreakers>
+</document>
